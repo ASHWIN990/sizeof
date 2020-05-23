@@ -12,12 +12,12 @@ fi
 ##### Creating the install function #####
 
 install(){
-    curl https://github.com/ASHWIN990/sizeof/raw/master/sizeof --output /tmp/sizeof
-    chmod +x /tmp/sizeof | echo -e "\e[93;1mCHANGING THE FILE PERMISSIONS"
-    mv -f /tmp/sizeof /usr/bin/ | echo -e "MOVING THE sizeof TO /usr/bin"
-    curl https://github.com/ASHWIN990/sizeof/raw/master/.man/sizeof.1.gz --output /tmp/sizeof.1.gz
+    curl https://raw.githubusercontent.com/ASHWIN990/sizeof/master/insta_install.sh --output /tmp/sizeof
+    chmod +x /tmp/sizeof | echo -e "\e[93;1mCHANGING THE FILE PERMISSIONS\e[0m"
+    mv -f /tmp/sizeof /usr/bin/ | echo -e "\e[93;1mMOVING THE sizeof TO /usr/bin\e[0m"
+    curl https://github.com/ASHWIN990/sizeof/blob/master/.man/sizeof.1.gz --output /tmp/sizeof.1.gz
     mv -f /tmp/sizeof.1.gz /usr/local/share/man/man1/sizeof.1.gz
-    mandb -q | echo -e "\e[93;1mUPDATING AND INSTALLING THE MANDB"
+    mandb -q | echo -e "\e[93;1mUPDATING AND INSTALLING THE MANDB\e[0m"
     }
 
 

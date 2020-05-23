@@ -15,7 +15,7 @@ install(){
     chmod +x sizeof | echo -e "\e[93;1mCHANGING THE FILE PERMISSIONS"
     mv -f sizeof /usr/bin/ | echo -e "MOVING THE sizeof TO /usr/bin"
     mv -f .man/sizeof.1.gz /usr/local/share/man/man1/sizeof.1.gz
-    mandb -q | echo -e "\e[93;1mUPDATING AND INSTALLING THE MANDB"
+    mandb -q | echo -e "\e[93;1mUPDATING AND INSTALLING THE MANDB\e[0m"
     cd .. && rm -rf sizeof/ | echo -e "DELETING THE GIT CLONED DIRECTORY"
     }
 
