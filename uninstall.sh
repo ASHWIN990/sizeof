@@ -11,8 +11,8 @@ fi
 
 uninstall(){
     rm -rf /usr/bin/sizeof | echo -e "DELETING THE sizeof FROM /usr/bin"
-    rm -rf /usr/local/share/man/man1/hbhc.1.gz
-    mandb -q | echo -e "\e[93;1mREMOVING THE MAN PAGE"
+    rm -rf /usr/local/share/man/man1/sizeof.1.gz
+    mandb -q | echo -e "REMOVING THE MAN PAGE"
     echo -e "THANKS FOR USING sizeof"
     }
 
