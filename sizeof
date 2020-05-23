@@ -691,6 +691,21 @@ import os
 import sys
 import argparse
 
+## Help Function ##
+
+def helper():
+  print("""
+sizeof - Find the size of files and Directory
+
+USAGE :-
+
+      sizeof [file name/path or directory name/path]
+
+   * To use size of just pass the file path/name, dir path/name to view the size of it.
+   * If nothing is passed it will print the size of present working directory.
+   * You can pass * to get the size of all files and directories in present working directory.
+  """)
+
 ## File size finding function ##
 
 def file_size(args):
@@ -741,6 +756,11 @@ def directory_size(args):
 ## MAIN FUNCTION ##
 
 def main():
+
+    for argss in sys.argv:
+      if argss == "-h" or argss == "--help":
+        helper()
+        exit(0)
 
     if len(sys.argv) > 1:
         for args in sys.argv[1:]:
