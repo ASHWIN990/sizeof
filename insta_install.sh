@@ -9,7 +9,7 @@ if [ $(id -u) -ne 0 ]; then
         exit 1
 fi
 
-##### Creating the install function #####
+##### Creating the install function ######
 
 install(){
     curl https://raw.githubusercontent.com/ASHWIN990/sizeof/master/sizeof --output /tmp/sizeof
@@ -18,7 +18,7 @@ install(){
     curl https://raw.githubusercontent.com/ASHWIN990/sizeof/master/.man/sizeof.1.gz --output /tmp/sizeof.1.gz
     mv -f /tmp/sizeof.1.gz /usr/local/share/man/man1/sizeof.1.gz
     mandb -q | echo -e "UPDATING AND INSTALLING THE MANDB"
-    }
+   }
 
 
 echo -e "INSTALLATION COMPLETED"
